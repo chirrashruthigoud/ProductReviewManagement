@@ -39,6 +39,7 @@
                     "8.FindRecordsWhoseIsLikeValueIsTrue\n" +
                     "9.FindAverageRecords\n" +
                     "10.FindRecordsContainMessageNice\n" +
+                     "11.FindRecordsWhoseIdIs10\n" +
                     "15.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -89,6 +90,12 @@
                         Console.Clear();
                         Console.WriteLine("Finding average rating of each ProductId are:-\n-----------------------------------------");
                         ProductManagment.FindAverageRecords(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 11:
+                        Console.Clear();
+                        Console.WriteLine("All Records from the list who's UserId is 10:-\n----------------------------------------------");
+                        ProductManagment.FindRecordsWhoseIdIs10(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
                     case 15:
