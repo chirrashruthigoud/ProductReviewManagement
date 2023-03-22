@@ -2,13 +2,13 @@
     {
     public class Program
 {
-    /// <summary>
-    /// UC1- Create variable for List of ProductReview class in Main method
-    /// </summary>
-    /// <param name="args"></param>
-    static void Main(string[] args)
-    {
-        List<ProductReview> list = new List<ProductReview>()
+        /// <summary>
+        /// UC1- Create variable for List of ProductReview class in Main method
+        /// </summary>
+        /// <param name="args"></param>
+        static void Main(string[] args)
+        {
+            List<ProductReview> list = new List<ProductReview>()
             {
                 new ProductReview() {ProductId=3, UserId=1, IsLike=true, Review ="Good", Rating=80 },
                 new ProductReview() {ProductId=1, UserId=2, IsLike=true, Review="Nice", Rating=20},
@@ -26,39 +26,39 @@
                 new ProductReview() {ProductId=1, UserId=10, IsLike=true, Review="Good", Rating=60},
                 new ProductReview() {ProductId=2, UserId=10, IsLike=true, Review="Bad", Rating=80},
             };
-        while (true)
-        {
-            Console.Clear();
-            Console.WriteLine("Please Select options");
-            Console.WriteLine("1.Display all data\n" +
-                "15.Exit");
-            int option = Convert.ToInt32(Console.ReadLine());
-            switch (option)
+            while (true)
             {
-                case 1:
-                    Console.Clear();
-                    Console.WriteLine("All Records fro the list:-\n-----------------------------------");
-                    DisplayProductReviews(list);
-                    Console.Write("\nPress any key to continue...... ");
-                    break;
-                case 15:
-                    Console.Clear();
-                    break;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("select only valid options");
-                    Console.Write("\nPress any key to continue...... ");
-                    break;
+                Console.Clear();
+                Console.WriteLine("Please Select options");
+                Console.WriteLine("1.Display all data\n" +
+                    "15.Exit");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        Console.Clear();
+                        Console.WriteLine("All Records fro the list:-\n-----------------------------------");
+                        DisplayProductReviews(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 15:
+                        Console.Clear();
+                        break;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("select only valid options");
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                }
+                Console.ReadLine();
             }
-            Console.ReadLine();
         }
-    }
-    public static void DisplayProductReviews(List<ProductReview> list)
-    {
-        foreach (ProductReview productReview in list)
+        public static void DisplayProductReviews(List<ProductReview> list)
         {
-            Console.WriteLine(productReview);
+            foreach (ProductReview productReview in list)
+            {
+                Console.WriteLine(productReview);
+            }
         }
-    }
 }
 }
