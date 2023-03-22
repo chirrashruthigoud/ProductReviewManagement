@@ -64,6 +64,7 @@ namespace ProductReviewManagment
             List<ProductReview> result = list.Skip(5).ToList();
             Program.DisplayProductReviews(result);
         }
+
         /// <summary>
         /// UC8- Retrieve all the records from the datatable variable who’s isLike value is true using LINQ.
         /// </summary>
@@ -73,6 +74,7 @@ namespace ProductReviewManagment
             List<ProductReview> result = list.Where(x => x.IsLike == true).OrderBy(x => x.IsLike).ToList();
             Program.DisplayProductReviews(result);
         }
+
         /// <summary>
         /// UC9- Find average rating of the each productId using LINQ
         /// </summary>
@@ -82,7 +84,7 @@ namespace ProductReviewManagment
             var result = list.Average(p => p.Rating);
             Console.WriteLine("Average records are: {0}", result);
         }
-       /// <summary>
+        // <summary>
         /// UC10- Retreive all records from the list who’s review message contain “nice” in it using LINQ.
         /// </summary>
         /// <param name="list"></param>
@@ -91,6 +93,7 @@ namespace ProductReviewManagment
             List<ProductReview> result = list.Where(p => p.Review.Contains("Nice")).ToList();
             Program.DisplayProductReviews(result);
         }
+
         /// <summary>
         /// UC12- Retreive all records from the list who’s Userid = 10 and order by rating using LINQ.
         /// </summary>
@@ -100,6 +103,5 @@ namespace ProductReviewManagment
             List<ProductReview> result = list.Where(x => x.UserId == 10).OrderBy(x => x.Rating).ToList();
             Program.DisplayProductReviews(result);
         }
-
     }
 }
