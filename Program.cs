@@ -55,6 +55,12 @@
                         ProductManagment.FetchRecordsBasedOnRatingAndProductId(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
+                    case 4:
+                        Console.Clear();
+                        Console.WriteLine("Finding Each count of ProductId are:-\n-----------------------------------");
+                        ProductManagment.FindingEachCountOfProductId(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
                     case 15:
                         Console.Clear();
                         break;
@@ -72,7 +78,6 @@
             foreach (ProductReview productReview in list)
             {
                 Console.WriteLine(productReview);
-
             }
         }
     }
