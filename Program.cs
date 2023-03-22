@@ -33,6 +33,10 @@
                 Console.WriteLine("1.Display all data\n" +
                     "2.RetreiveTop3Records\n" +
                     "3.FetchRecordsBasedOnRatingAndProductId\n" +
+                    "4.FindingEachCountOfProductId\n" +
+                    "5.DisplayProductIdAndReview\n" +
+                    "6.SkipTop5Records\n" +
+                    "8.FindRecordsWhoseIsLikeValueIsTrue\n" +
                     "15.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -61,18 +65,30 @@
                         ProductManagment.FindingEachCountOfProductId(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
-                    case 15:
+                    case 5:
                         Console.Clear();
-                        break;
-                    default:
-                        Console.Clear();
-                        Console.WriteLine("select only valid options");
+                        Console.WriteLine("Disply ProductId and Review:-\n-----------------------------------");
+                        ProductManagment.DisplayProductIdAndReview(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
                     case 6:
                         Console.Clear();
                         Console.WriteLine("Remaining records after skip top five records:-\n------------------------------------------------------");
                         ProductManagment.SkipTop5Records(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 8:
+                        Console.Clear();
+                        Console.WriteLine("All Records from the list who's Islike value is \"true\":-\n-----------------------------------------");
+                        ProductManagment.FindRecordsWhoseIsLikeValueIsTrue(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 15:
+                        Console.Clear();
+                        break;
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("select only valid options");
                         Console.Write("\nPress any key to continue...... ");
                         break;
                 }
