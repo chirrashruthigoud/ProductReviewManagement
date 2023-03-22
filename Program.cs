@@ -83,6 +83,12 @@
                         ProductManagment.FindRecordsWhoseIsLikeValueIsTrue(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
+                    case 9:
+                        Console.Clear();
+                        Console.WriteLine("Finding average rating of each ProductId are:-\n-----------------------------------------");
+                        ProductManagment.FindAverageRecords(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
                     case 15:
                         Console.Clear();
                         break;
@@ -95,6 +101,7 @@
                 Console.ReadLine();
             }
         }
+    
         public static void DisplayProductReviews(List<ProductReview> list)
         {
             foreach (ProductReview productReview in list)
